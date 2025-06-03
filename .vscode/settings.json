@@ -1,0 +1,6 @@
+{
+    "liveServer.settings.fullReload": true,
+    "liveServer.settings.ChromeDebuggingAttachment": true,
+    "fiveServer.injectBody": true,
+    "fiveServer.openTerminal": false
+}

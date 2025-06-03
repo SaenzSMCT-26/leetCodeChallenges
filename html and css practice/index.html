@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Clip Path</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                font-family: monospace;
+            }
+            html{
+                width: 100%;
+                height: 100%;
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                height: 100%;
+            }
+            .wrapper{
+                filter: drop-shadow(7px -5px 12px rgba(0,0,0,.4));
+            }
+            .box{
+                box-shadow: inset 0px 0px 20px rgba(0,0,0,.4);
+                width: 500px;
+                height: 350px;
+                clip-path: path("M 10,0 L 200,0 A 10,10 0,0,1 210,10 L 210,100 A 10,10 0,0,0 220,110 L 490,110 A 10,10 0,0,1 500,120 L 500,340 A 10,10 0,0,1 490,350 L 110,350 A 10,10 0,0,1 100,340 L 100,300 A 10,10 0,0,0 90,290 L 10,290 A 10,10 0,0,1 0,280 L 0,10 A 10,10 0,0,1 10,0 Z");
+                background-image: linear-gradient(to left, transparent 0%50%, #d8d5af 50%55%, #ecc0aa 55%60%, #b17485 60%65%, #69566d 65%70%, #45496e 70%75%, #9ab498 75%80%, #8a77a0 80%85%, #b3d4d2 85%90%, #dac2d6 90%95%, #FFFFFF 95%100%), linear-gradient(#a39a38 10%, #E38F66 10% 20%, #c48092 20% 30%, #3e745f 30% 40%, #539183 40%50%, #80b8aa 50%60%, #5d97a1 60%70%, #9babca 70%80%, #7b9fa8 80%90%, #cecece 90%100%);
+            }
+            .btn{
+                z-index: 2;
+                box-shadow: inset 0px 0px 4px rgba(0,0,0,.2), -3px 2px 10px rgba(0,0,0,.2);
+                border: none;
+                position: relative;
+                bottom: 54px;
+                width: 90px;
+                height: 51px;
+                border-radius: 10px;
+                background-color: white;
+                color: lightgray;
+                font-weight: bolder;
+                font-size: 14pt;
+                transition: .1s;
+            }
+            .btn:hover{
+                color: turquoise;
+            }
+            .btn:active{
+                box-shadow: none;
+                transition: .05s;
+                background-color: rgb(230, 230, 230);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="wrapper">
+                <div class="box"></div>
+            </div>
+            <button class="btn">Button</button>
+        </div>
+
+
+
+        
+    </body>
+</html>
