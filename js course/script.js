@@ -14,29 +14,51 @@
 // console.log(flight);
 // console.log(isaac);
 
+
+
+
+// const transaction = {
+//     id: 104,
+//     amount: 500,
+//     type: "withdrawal"
+// }
+
+// function logTransaction(fn){
+//     console.log(`Processing transaction...`);
+//     fn(transaction);
+// }
+
+// function details(det){
+//     console.log(`Transaction #${det.id} of ${det.amount} was a ${det.type}.`)
+// }
+
+// logTransaction(details);
+
+
 /*first class vs higher-order- functions*/
 
-const oneWord = function(str){
-    return str.replace(/ /g, '').toLowerCase();
-}
-const upperFirstWord = function(str){
-    const [first, ...others] = str.split(' ');
-    return [first.toUpperCase(), ...others].join(' ');
-}
+// const oneWord = function(str){
+//     return str.replace(/ /g, '').toLowerCase();
+// }
+// const upperFirstWord = function(str){
+//     const [first, ...others] = str.split(' ');
+//     return [first.toUpperCase(), ...others].join(' ');
+// }
 
+// // Higher-order function
+// const transformer = function(str, fn){
+//     console.log(`Original string: ${str}`);
+//     console.log(`Transformed string: ${fn(str)}`);
 
-const transformer = function(str, fn){
-    console.log(`Origi9nal string: ${str}`);
-    console.log(`Transformed string: ${fn(str)}`);
+//     console.log(`Transformed by: ${fn}`);
+// }
 
-    console.log(`Transformed by: ${fn.name}`);
-}
+// const greet = function(greeting){
+//     return function(name){
+//         console.log(`${greeting} ${name}`);
+//     }
+// }
 
-transformer('JavaScript is the best!', upperFirstWord);
-transformer('JavaScript is the best!', oneWord);
+const greet = greeting => name => console.log(`${greeting} ${name}`);
 
-const high5 = function(){
-    console.log('👏');
-}
-document.body.addEventListener('click', high5);
-['Isaac', 'Kelsey', 'Ivaan'].forEach(high5);
+greet('Hi')('Isaac');
