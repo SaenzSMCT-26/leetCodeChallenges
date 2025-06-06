@@ -41,13 +41,40 @@ function charCount(str){
 }
 
 
-const bubbleSort = (nums = [2,3,4,23], target = 25) => {
-    let n = nums.length
-    for(let i = 0; i < n; i++){
-        for(let j = i + 1; j < n; j++){
-            let result = nums[j] + nums[i] === target ? console.log([i, j]) : null;
-            if(result) return result;
+
+//===================================================================================================================================
+//                                                      BUBBLE SORT ALGORITHM
+//===================================================================================================================================
+let array1 = ['a','b','c','k','w'];
+let array2 = ['v','k','d','t'];
+
+function sortArrays(ar1, ar2){
+    for(let i=0; i<array1.length; i++){
+        for(let j=0; j<array2.length; j++){
+            if(ar1[i] === ar2[j]){
+                return [i, j];  //This will give youa the postions of the items in each array.
+
+                //return [ar1[i], ar2[j]] <----  //This will give you the two matching items side by side.
+            }
         }
     }
+    return 'Nothing Here';
 }
-bubbleSort();
+
+console.log(sortArrays(array1, array2));
+
+
+let nums = [1,2,3,4,5];
+        // [0,1,2,3,4] <---- this represents the index number in the array "nums" for the each of the items;
+let target = 12;
+
+function twoSum(num, tar){
+    for(let i=0; i<nums.length; i++){
+        for(let j=i+1; j<nums.length; j++){
+            if(num[i] + num[j] === tar){return [i,j]};
+        }
+    }
+    return `Can't find numbers that add up to ${target}`;
+}
+
+console.log(twoSum(nums, target));
