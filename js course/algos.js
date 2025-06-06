@@ -66,15 +66,36 @@ console.log(sortArrays(array1, array2));
 
 let nums = [1,2,3,4,5];
         // [0,1,2,3,4] <---- this represents the index number in the array "nums" for the each of the items;
-let target = 12;
+let target = 9;
 
-function twoSum(num, tar){
-    for(let i=0; i<nums.length; i++){
-        for(let j=i+1; j<nums.length; j++){
-            if(num[i] + num[j] === tar){return [i,j]};
+
+
+
+
+
+
+
+function twoSum1(nums, target){
+    for(let i = 0; i<nums.length; i++){
+        for(let j = i + 1; j<nums.length; j++){
+            if(nums[i] + nums[j] === target) return [i, j];
         }
     }
-    return `Can't find numbers that add up to ${target}`;
+    return 'Nothing Found';
 }
 
-console.log(twoSum(nums, target));
+
+//---------------
+//      O(n)
+//---------------
+function twoSum2(n, t){
+    let newMap = {};
+    for(let i=0; i<nums.length; i++){
+        let mappedNums = t - n[i];
+        if(newMap[mappedNums] !== undefined) return [newMap[mappedNums], i];
+        newMap[n[i]] = i;
+    }
+    return 'Not Here';
+}
+console.log(`[${twoSum1(nums, target)}] <-- O(n^2)`);
+console.log(`[${twoSum2(nums, target)}] <-- O(n)`);
