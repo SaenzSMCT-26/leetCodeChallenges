@@ -61,20 +61,25 @@ function sortArrays(ar1, ar2){
     return 'Nothing Here';
 }
 
+
+function sortArrays2(ar1, arr2){
+    let noteBook = {};
+    for(let i = 0; i < array1.length; i++){
+        if(!noteBook)
+    }
+
+}
 console.log(sortArrays(array1, array2));
+console.log(sortArrays2(array1, array2));
 
 
 let nums = [1,2,3,4,5];
         // [0,1,2,3,4] <---- this represents the index number in the array "nums" for the each of the items;
 let target = 9;
 
-
-
-
-
-
-
-
+//---------------
+//      O(n^2)
+//---------------
 function twoSum1(nums, target){
     for(let i = 0; i<nums.length; i++){
         for(let j = i + 1; j<nums.length; j++){
