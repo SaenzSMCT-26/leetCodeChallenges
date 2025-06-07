@@ -62,15 +62,15 @@ function sortArrays(ar1, ar2){
 }
 
 
-function sortArrays2(ar1, arr2){
-    let noteBook = {};
-    for(let i = 0; i < array1.length; i++){
-        if(!noteBook)
-    }
+// function sortArrays2(ar1, arr2){
+//     let noteBook = {};
+//     for(let i = 0; i < array1.length; i++){
+//         if(!noteBook)
+//     }
 
-}
+// }
 console.log(sortArrays(array1, array2));
-console.log(sortArrays2(array1, array2));
+// console.log(sortArrays2(array1, array2));
 
 
 let nums = [1,2,3,4,5];
@@ -104,3 +104,9 @@ function twoSum2(n, t){
 }
 console.log(`[${twoSum1(nums, target)}] <-- O(n^2)`);
 console.log(`[${twoSum2(nums, target)}] <-- O(n)`);
+
+let obj = {
+    name: 'Isaac',
+    age: 24,
+    
+}
