@@ -138,57 +138,22 @@
 
 // console.log(containsCommonItem2(array1, array2));
 
-// let numbers = [3, 4, 5, 6, 7, 8, 9, 10];
+let numbers = [3, 4, 5, 6, 7, 8, 9, 10];
 
-// function isDivisibleBy3(arr) {
-//     // Create an object to store arr that are divisible by 3
-//     let map = {};
-//     for(let i = 0; i < arr.length; i++){
-//         if(arr[i] % 2 === 0){
-//             map[arr[i]] = 'divisible';
-//         } else{
-//             map[arr[i]] = 'not divisible';
-//         }
-//     }
-//     return map;
-// }
+function isDivisibleBy3(arr) {
+    // Create an object to store arr that are divisible by 3
+    let map = {};
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] % 2 === 0){
+            map[arr[i]] = 'divisible';
+        } else{
+            map[arr[i]] = 'not divisible';
+        }
+    }
+    return map;
+}
 
-// console.log(isDivisibleBy3(numbers));
-
-// function sortArrays2(ar1, arr2){
-//     let noteBook = {};
-//     for(let i = 0; i < array1.length; i++){
-//         if(!noteBook)
-//     }
-
-// }
-// console.log(sortArrays(array1, array2));
-// console.log(sortArrays2(array1, array2));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(isDivisibleBy3(numbers));
 
 
 // let list = [3,6,8,10,43,25,16];
@@ -209,17 +174,3 @@
 // }
 
 // console.log(findDivisible(list));
-//---------------
-//      O(n)
-//---------------
-function twoSum2(n, t){
-    let newMap = {};
-    for(let i=0; i<nums.length; i++){
-        let mappedNums = t - n[i];
-        if(newMap[mappedNums] !== undefined) return [newMap[mappedNums], i];
-        newMap[n[i]] = i;
-    }
-    return 'Not Here';
-}
-console.log(`[${twoSum1(nums, target)}] <-- O(n^2)`);
-console.log(`[${twoSum2(nums, target)}] <-- O(n)`);
