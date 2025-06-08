@@ -138,24 +138,22 @@
 
 // console.log(containsCommonItem2(array1, array2));
 
-let numbers = [3, 4, 5, 6, 7, 8, 9, 10];
+// let numbers = [3, 4, 5, 6, 7, 8, 9, 10];
 
-function isDivisibleBy3(arr) {
-    // Create an object to store arr that are divisible by 3
-    let map = {};
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] % 2 === 0){
-            map[arr[i]] = 'divisible';
-        } else{
-            map[arr[i]] = 'not divisible';
-        }
-    }
-    return map;
-}
+// function isDivisibleBy3(arr) {
+//     // Create an object to store arr that are divisible by 3
+//     let map = {};
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] % 2 === 0){
+//             map[arr[i]] = 'divisible';
+//         } else{
+//             map[arr[i]] = 'not divisible';
+//         }
+//     }
+//     return map;
+// }
 
-<<<<<<< HEAD:js course/algos.js
-console.log(isDivisibleBy3(numbers));
-=======
+// console.log(isDivisibleBy3(numbers));
 
 // function sortArrays2(ar1, arr2){
 //     let noteBook = {};
@@ -164,14 +162,12 @@ console.log(isDivisibleBy3(numbers));
 //     }
 
 // }
-console.log(sortArrays(array1, array2));
+// console.log(sortArrays(array1, array2));
 // console.log(sortArrays2(array1, array2));
->>>>>>> 4039d297b5f9f56ba68172455cdcb763bca312f9:Data Structures and Algorithms/algos.js
 
 
 
 
-<<<<<<< HEAD:js course/algos.js
 
 
 
@@ -213,7 +209,6 @@ console.log(sortArrays(array1, array2));
 // }
 
 // console.log(findDivisible(list));
-=======
 //---------------
 //      O(n)
 //---------------
@@ -228,10 +223,3 @@ function twoSum2(n, t){
 }
 console.log(`[${twoSum1(nums, target)}] <-- O(n^2)`);
 console.log(`[${twoSum2(nums, target)}] <-- O(n)`);
-
-let obj = {
-    name: 'Isaac',
-    age: 24,
-    
-}
->>>>>>> 4039d297b5f9f56ba68172455cdcb763bca312f9:Data Structures and Algorithms/algos.js
