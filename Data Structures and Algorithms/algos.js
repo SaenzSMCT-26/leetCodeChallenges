@@ -138,22 +138,22 @@
 
 // console.log(containsCommonItem2(array1, array2));
 
-let numbers = [3, 4, 5, 6, 7, 8, 9, 10];
+// let numbers = [3, 4, 5, 6, 7, 8, 9, 10];
 
-function isDivisibleBy3(arr) {
-    // Create an object to store arr that are divisible by 3
-    let map = {};
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] % 2 === 0){
-            map[arr[i]] = 'divisible';
-        } else{
-            map[arr[i]] = 'not divisible';
-        }
-    }
-    return map;
-}
+// function isDivisibleBy3(arr) {
+//     // Create an object to store arr that are divisible by 3
+//     let map = {};
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] % 2 === 0){
+//             map[arr[i]] = 'divisible';
+//         } else{
+//             map[arr[i]] = 'not divisible';
+//         }
+//     }
+//     return map;
+// }
 
-console.log(isDivisibleBy3(numbers));
+// console.log(isDivisibleBy3(numbers));
 
 
 // let list = [3,6,8,10,43,25,16];
@@ -174,3 +174,19 @@ console.log(isDivisibleBy3(numbers));
 // }
 
 // console.log(findDivisible(list));
+
+
+let nums = [2,3,4,8,9];
+let target = 7;
+
+function twoSum(n, t = ){
+    let hM = {};
+    for(let i = 0; i < n.length; i++){
+        let c = t - n[i];
+        hM[n[i]] = i;
+        if(hM[c]) [hM[c], i];
+    }
+    return hM;
+}
+
+console.log(twoSum(nums));
