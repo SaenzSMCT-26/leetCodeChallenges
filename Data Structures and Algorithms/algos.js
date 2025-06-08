@@ -156,31 +156,6 @@ function isDivisibleBy3(arr) {
 console.log(isDivisibleBy3(numbers));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // let list = [3,6,8,10,43,25,16];
 
 // const findDivisible = function(a){
