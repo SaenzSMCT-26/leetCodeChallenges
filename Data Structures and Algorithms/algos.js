@@ -153,11 +153,25 @@ function isDivisibleBy3(arr) {
     return map;
 }
 
+<<<<<<< HEAD:js course/algos.js
 console.log(isDivisibleBy3(numbers));
+=======
+
+// function sortArrays2(ar1, arr2){
+//     let noteBook = {};
+//     for(let i = 0; i < array1.length; i++){
+//         if(!noteBook)
+//     }
+
+// }
+console.log(sortArrays(array1, array2));
+// console.log(sortArrays2(array1, array2));
+>>>>>>> 4039d297b5f9f56ba68172455cdcb763bca312f9:Data Structures and Algorithms/algos.js
 
 
 
 
+<<<<<<< HEAD:js course/algos.js
 
 
 
@@ -199,3 +213,25 @@ console.log(isDivisibleBy3(numbers));
 // }
 
 // console.log(findDivisible(list));
+=======
+//---------------
+//      O(n)
+//---------------
+function twoSum2(n, t){
+    let newMap = {};
+    for(let i=0; i<nums.length; i++){
+        let mappedNums = t - n[i];
+        if(newMap[mappedNums] !== undefined) return [newMap[mappedNums], i];
+        newMap[n[i]] = i;
+    }
+    return 'Not Here';
+}
+console.log(`[${twoSum1(nums, target)}] <-- O(n^2)`);
+console.log(`[${twoSum2(nums, target)}] <-- O(n)`);
+
+let obj = {
+    name: 'Isaac',
+    age: 24,
+    
+}
+>>>>>>> 4039d297b5f9f56ba68172455cdcb763bca312f9:Data Structures and Algorithms/algos.js
