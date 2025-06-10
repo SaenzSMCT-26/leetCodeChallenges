@@ -14,7 +14,7 @@ function findNumInRange(a, b){
     } 
 }
 
-findNumInRange(12, 10000);
+findNumInRange(12, 100000);
 
 
 
