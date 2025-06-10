@@ -176,17 +176,17 @@
 // console.log(findDivisible(list));
 
 
-let nums = [2,3,4,8,9];
-let target = 7;
+// let nums = [2,3,4,8,9];
+// let target = 7;
 
-function twoSum(n, t = ){
-    let hM = {};
-    for(let i = 0; i < n.length; i++){
-        let c = t - n[i];
-        hM[n[i]] = i;
-        if(hM[c]) [hM[c], i];
-    }
-    return hM;
-}
+// function twoSum(n, t = ){
+//     let hM = {};
+//     for(let i = 0; i < n.length; i++){
+//         let c = t - n[i];
+//         hM[n[i]] = i;
+//         if(hM[c]) [hM[c], i];
+//     }
+//     return hM;
+// }
 
-console.log(twoSum(nums));
+// console.log(twoSum(nums));
