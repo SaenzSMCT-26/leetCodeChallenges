@@ -7,6 +7,7 @@ const generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1))
 
 function findNumInRange(a, b){
     let num;
+
     for(let i = 0; i < Infinity; i++){
         num = generateNumber(a, b);
         num > 12 ? console.log(num) : console.log(`Found: ${num}`);
@@ -14,7 +15,7 @@ function findNumInRange(a, b){
     } 
 }
 
-findNumInRange(12, 10000);
+// findNumInRange(12, 100000);
 
 
 
@@ -36,22 +37,18 @@ findNumInRange(12, 10000);
 //2 params - arrays - no size limit
 //return true or false;
 
+let arr1 = [1,2,3,4,5];
+let arr2 = ['a','b','c',2,'l'];
 
-//we want to compare both of these arrays to see if there are any similar items
-const array1 = ['a','b','c','x'];
-const array2 = ['z','y','x'];
+const findTheNumberInLetters = function(a1, a2){
+    for(let i = 0; i < a1.length; i++){
+        // for(let j = a2.length; j > 0; j--){
+        for(let j = 0; j < a2.length; j++){
+            arr1[i] === arr2[j] && typeof "number" 
+            ? console.log([i, j]) 
+            : null;
+        }
+    }
+}
 
-//we could use brute force
-
-// function compareItems(arr1, arr2){
-//     for(let i=0; i<arr1.length; i++){
-//         for(let j=0; j<arr2.length; j++){
-//             if(arr1[i] === arr2[j]){
-//                 return true;
-//             }
-//         }
-//     }
-//     return false;
-// }
-
-// console.log(compareItems(array1, array2));
+findTheNumberInLetters(arr1, arr2);
