@@ -176,17 +176,143 @@
 // console.log(findDivisible(list));
 
 
-// let nums = [2,3,4,8,9];
-// let target = 7;
 
-// function twoSum(n, t = ){
-//     let hM = {};
-//     for(let i = 0; i < n.length; i++){
-//         let c = t - n[i];
-//         hM[n[i]] = i;
-//         if(hM[c]) [hM[c], i];
-//     }
-//     return hM;
-// }
 
-// console.log(twoSum(nums));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let nums = [2,7,11,15];
+/* this is your data you will be sorting through
+   to find the 2 #s that add up to the target # */
+let target = 9; // this is the target #
+
+
+// this is your function
+function twoSum(n, t){
+
+
+
+    //____________________________________________________________________________________________________    
+    //-------------------------------                   
+    //hM - (hash map/ storage)
+    //-------------------------------                   
+    let hM = {};
+    /* this will be the storage for the numbers that
+    don't meet the if statements conditions. it is currently empty*/
+    //___________________________________________________________________________________________________
+
+
+
+    for(let i = 0; i < n.length; i++){ // using a for loop to loop through the nums list
+
+
+
+        //========================================================================================================================================================================
+
+        // first iteration: let c = 9 - 2 = 7
+        let c = t - n[i];
+        /* c(complement) is a going to = the target minus 
+           the nums list current iteration */
+        //========================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+        
+
+        
+        //========================================================================================================================================================================
+        //-----------------------------                   
+        //first iteration: 
+        //-----------------------------                   
+        /* does the hash  of 7 exist in hM ? if not, ignore return statement and move to the next 
+           if  exists  */
+
+        if(hM[c] !== undefined) return [hM[c], i];
+        /* this is the conditional statement that 
+        essentially says if a complementary # is 
+        found in the storage that can be added to 
+        the current # that the for loop is iterating 
+        through - and is NOT an undefined # in the 
+        storage anymore - then return [hM[c], i]([0, 1]) */
+        //========================================================================================================================================================================
+        
+        
+
+
+
+
+
+
+
+
+
+        //========================================================================================================================================================================
+        //i = the current index iteration of the for loop
+        //n = the current iterated number in our array "nums".
+        //hM = the hashMap(storage) or object has the stored #s that are inadiquate to the conditional statement
+        
+        /* so hM[n[i]] is like saying "store the current index(i) of the array 'nums' value(2) in object(hM) andj assign it the value of the current index(i = 0)" */ 
+        /*    ^  ^ ^___________________________________________^                            ^            ^    
+              |  |__________________________________________________________________________|            |
+              |__________________________________________________________________________________________|   */
+
+
+        //--------------------------------------
+        // can be described as: 
+        //--------------------------------------
+        // loop iteration code, 
+        // hash map assignment, 
+        // mutation step inside loop, 
+        // or side-effect-producing statement during
+
+        hM[n[i]] = i;
+        /* This represents a value that is going 
+        to get stored in our hashMap(the "storage") 
+        if our conditional statement isn't met*/
+        //========================================================================================================================================================================
+    }
+}
+
+// this will call the function and log the result([0, 1]) to the output terminal
+console.log(twoSum(nums, target)); 
+
+
+let letters = ['a','b','c',2,'d','e'];
+ 
+const findLetter = function(l){
+    for(let i = 0; i < l.length; i++){
+        let s = l[i];
+        if(typeof s === "number"){
+            return console.log(`Found the number: ${l[i]}`);
+        }
+    }
+    return console.log('not found');  
+}
+
+findLetter(letters);
