@@ -3,7 +3,7 @@
 //
 
 
-const generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+/* const generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 function findNumInRange(a, b){
     let num;
@@ -14,7 +14,7 @@ function findNumInRange(a, b){
     } 
 }
 
-findNumInRange(12, 100000);
+findNumInRange(12, 100000); */
 
 
 
@@ -38,8 +38,8 @@ findNumInRange(12, 100000);
 
 
 //we want to compare both of these arrays to see if there are any similar items
-const array1 = ['a','b','c','x'];
-const array2 = ['z','y','x'];
+/* const array1 = ['a','b','c','x'];
+const array2 = ['z','y','x']; */
 
 //we could use brute force
 
@@ -55,3 +55,14 @@ const array2 = ['z','y','x'];
 // }
 
 // console.log(compareItems(array1, array2));
+
+let array = [25,20];
+let baseNum = 20;
+function check(a, b){
+    for(let i=0; i<a.length; i++){
+        if(a[i] > b){
+            return console.log("Coding is Fun");
+        }
+    }
+}
+check(array, baseNum);
