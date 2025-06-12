@@ -1,3 +1,5 @@
+"use strict";
+
 
 //generates random number in a range of min and max number inputs
 //
@@ -51,4 +53,4 @@ const findTheNumberInLetters = function(a1, a2){
     }
 }
 
-findTheNumberInLetters(arr1, arr2);
+findTheNumberInLetters(arr1, arr2); */
