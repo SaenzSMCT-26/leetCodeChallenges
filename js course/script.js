@@ -59,6 +59,64 @@
 //     }
 // }
 
-const greet = greeting => name => console.log(`${greeting} ${name}`);
+// const greet = greeting => name => console.log(`${greeting} ${name}`);
 
-greet('Hi')('Isaac');
+// greet('Hi')('Isaac');
+
+
+
+//---------------------
+//operator precedennce
+//---------------------
+/* const now = 2037;
+const ageIsaac = now - 1991;
+const ageKels = now - 1991;
+
+console.log(now - 1991 > now - 2018);
+
+let x, y;
+x = y = 25 - 10 - 5;// x = y = 10, x = 10;
+console.log(x, y);
+
+const  averageAge = (ageIsaac + ageKels) / 2;
+console.log(ageIsaac, ageKels, averageAge); */
+
+
+
+
+//------------------------------------------------------
+// taking decisions: if / else statements
+//------------------------------------------------------
+/* const age  = 19;
+const isOldEnough = age >= 18;
+
+if(isOldEnough){
+    console.log('Isaac can start diving lessons😊');
+} else{
+    const yearsLeft = 18 - age;
+    console.log(`Isaac is not old enough to drive yet😢 ${yearsLeft} years :)`);
+}
+
+const birthYear = 2000;
+
+let century;
+if(birthYear <= 2000){
+    century = 20;
+} else{
+    century = 21;
+}
+
+console.log(century); */
+
+
+
+
+//------------------------------------------------------
+// type conversion and coercion
+//------------------------------------------------------
+const number = Number("2");
+console.log(typeof number);
+
+const inputYear = '1991';
+console.log(`Number: ${Number(inputYear)} | String: "${inputYear}"`);
+console.log(inputYear + 18);
