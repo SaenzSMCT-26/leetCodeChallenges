@@ -1,3 +1,5 @@
+"use strict";
+
 // const flight = 'LH234';
 // const isaac = {
 //     name: 'Isaac Saenz',
@@ -59,7 +61,7 @@
 //     }
 // }
 
-// const greet = greeting => name => console.log(`${greeting} ${name}`);
+// // const greet = greeting => name => console.log(`${greeting} ${name}`);
 
 // greet('Hi')('Isaac');
 
@@ -120,3 +122,102 @@ console.log(typeof number);
 const inputYear = '1991';
 console.log(`Number: ${Number(inputYear)} | String: "${inputYear}"`);
 console.log(inputYear + 18);
+// greet('Hi')('Isaac');
+
+
+
+
+
+//========================================================================================================================
+//                                                  (JS Fundamentals)
+//========================================================================================================================
+
+//=============
+//truth table
+//=============
+                        //A
+        // _________________________________
+        //|         |           |           |
+        //|  AND    |   TRUE    |   FALSE   |
+        //|         |           |           |
+        //|_________|___________|___________|
+        //|         |           |           |
+//B     //|  TRUE   |   TRUE    |   FALSE   |
+        //|         |           |           |
+        //|_________|___________|___________|
+        //|         |           |           |
+        //|  FALSE  |   FALSE   |   FALSE   |
+        //|         |           |           |
+        //|_________|___________|___________|
+
+
+
+/* console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Isaac'));
+console.log(Boolean({}));
+console.log(Boolean(''));
+
+const money = 0;
+if(money){
+    console.log("Don't spend it all ;");
+} else{
+    console.log('You should get a job');
+} */
+
+/* const age = '18';
+if(age === 18) console.log('You just became an adult (strict)');
+if(age == 18) console.log('You just became an adult (loose)');
+
+const fav = Number(prompt("what's your favorite number?"));
+console.log(fav);
+console.log(typeof fav);
+
+if(fav === 23){// 23 === 23
+    console.log('Cool! 23 is an amazing number');
+}
+else if (fav === 7){
+    console.log('7 is also a cool number');
+}
+else if(fav === 9){
+    console.log('9 is also a cool number');
+}
+else{
+    console.log('Number is not 23 or 7 or 9');
+}
+
+
+if(fav !== 23) console.log('Why not 23?'); */
+
+
+/* Challenge 3 video solution */
+// function avScores(a, b){
+//     if(a > b) console.log()
+// }
+
+//======================================================
+//                  switch statements
+//======================================================
+const day = 'monday';
+
+switch(day){
+    case 'monday':
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'tuesday':
+        console.log('Prepare theory videos');
+        break;
+    case 'wednesday':
+        console.log('Write code examples');
+        break;
+    case 'thursday':
+    case 'friday':
+        console.log('Record videos');
+    case 'saturday':
+    case 'sunday':
+        console.log('Enjoy the weekend');
+        break;
+    default:
+        console.log('Not a valid day!');
+}
