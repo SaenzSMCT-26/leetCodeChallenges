@@ -316,3 +316,37 @@ const findLetter = function(l){
 }
 
 findLetter(letters);
+
+
+
+//Find the number in the array that can be added to itself to = 20;
+
+function bubbleSort(arr){
+    for(let i = 0; i<arr.length; i++){
+        let swapped = false;
+        let printArr = false;
+
+        for(let j = 0; j < arr.length; j++){
+            if(arr[j] > arr[j+1]){
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                swapped = true;
+                printArr = true;
+            }
+        }
+        if(!swapped && !printArr){
+            console.log('Already sorted');
+            break;
+        }
+        if(printArr){
+            console.log(arr);
+            break;
+        }
+    }
+}
+
+// let arrayOne = [1,2,3,4,5,6,7,8,9,10];
+      //indices:0,1,2,3,4,5,6,7,8,9
+// console.log(`Index: ${bubbleSort(arrayOne)}`);
+
+let arrayTwo = [1,2,6,4,5,10];
+bubbleSort(arrayTwo);

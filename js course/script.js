@@ -139,7 +139,7 @@ console.log('I am ' + '23' + ' years old'); */
 //------------------------------------------------------
 // truthy and falsy
 //------------------------------------------------------
-console.log(Boolean(0));
+/* console.log(Boolean(0));
 console.log(Boolean(undefined));
 console.log(Boolean('Isaac'));
 console.log(Boolean({}));
@@ -157,7 +157,7 @@ if(height){
     console.log('Yay! height is defined.');
 } else{
     console.log('Height is UNDEFINED');
-}
+} */
 
 
 //========================================================================================================================
@@ -167,20 +167,20 @@ if(height){
 //=============
 //truth table
 //=============
-                        //A
-        // _________________________________
-        //|         |           |           |
-        //|  AND    |   TRUE    |   FALSE   |
-        //|         |           |           |
-        //|_________|___________|___________|
-        //|         |           |           |
+//A
+// _________________________________
+//|         |           |           |
+//|  AND    |   TRUE    |   FALSE   |
+//|         |           |           |
+//|_________|___________|___________|
+//|         |           |           |
 //B     //|  TRUE   |   TRUE    |   FALSE   |
-        //|         |           |           |
-        //|_________|___________|___________|
-        //|         |           |           |
-        //|  FALSE  |   FALSE   |   FALSE   |
-        //|         |           |           |
-        //|_________|___________|___________|
+//|         |           |           |
+//|_________|___________|___________|
+//|         |           |           |
+//|  FALSE  |   FALSE   |   FALSE   |
+//|         |           |           |
+//|_________|___________|___________|
 
 
 
@@ -230,7 +230,7 @@ if(fav !== 23) console.log('Why not 23?'); */
 //======================================================
 //                  switch statements
 //======================================================
-const day = 'monday';
+/* const day = 'monday';
 
 switch(day){
     case 'monday':
@@ -252,4 +252,30 @@ switch(day){
         break;
     default:
         console.log('Not a valid day!');
+} */
+
+
+/* function calcAge(birthYear) {
+    const age = 2025 - birthYear;
+    console.log(firstName);
+
+    const printAge = () => {
+        const output = `You are ${age}, born in ${birthYear}`;
+        console.log(output);
+
+        if (birthYear >= 1998 && birthYear <= 2007){
+            const str = `Oh, and you're a Gen-Z, ${firstName}`;
+            console.log(str);
+        }
+    }
+    printAge();
+
+    return age; 
 }
+
+const firstName = 'Isaac';
+calcAge(2000); */
+
+/* Hoisting: Makes some types of variables accessible/
+usable in the code before they are actually declared. 
+"variables lifted to the top of their scope"*/
