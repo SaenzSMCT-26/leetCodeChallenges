@@ -3,18 +3,20 @@ const bubblesort1 = function(arr){
       let sorted = false; 
       let counter = 0;
       let k = 2;
-      for(let i=0; i < arr.length; i++){
-            for(let j=0; j<arr.length - i - 1; j++){
+
+      outerLoop : for(let i = 0; i < arr.length; i++){
+            for(let j = 0; j < arr.length - i - 1; j++){
                   if(arr[j] > arr[j+1]){
                         [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
                         sorted = true;
                         counter++;
+                        if(counter === k) break outerLoop;
                   }
             }
       }
       if(!sorted) return 'Already Sorted';
       if(counter === k){
-            console.logG(`sorted in ${counter}`);
+            console.log(`After ${counter} swaps.`);
             return arr;
       }
             
