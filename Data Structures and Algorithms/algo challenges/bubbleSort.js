@@ -1,23 +1,36 @@
 const bubblesort1 = function(arr){
-      let sorted = false;
 
-      for(let i=0; i<arr.length; i++){
+      let sorted = false; 
+      let counter = 0;
+      let k = 2;
+      for(let i=0; i < arr.length; i++){
             for(let j=0; j<arr.length - i - 1; j++){
-                  if(arr[j] < arr[j+1]){
+                  if(arr[j] > arr[j+1]){
                         [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
                         sorted = true;
-                  } 
+                        counter++;
+                  }
             }
-            
       }
-
-      if(!sorted) console.log('Already Sorted');
-      if (sorted) console.log(arr);
+      if(!sorted) return 'Already Sorted';
+      if(counter === k){
+            console.logG(`sorted in ${counter}`);
+            return arr;
+      }
+            
+      // if (sorted) {console.log(`the array is sorted in ${counter} swaps.`); return arr;}
 } 
 
-let array1 = [23,121,35,22,32,1,3,6,9,10,8,7];
-bubblesort1(array1);
+let array1 = [9, 7, 5, 3, 1];
+// let array1 = ['banana', 'Apple', 'date', 'Cherry'];
+// let array1 = [4,2,3,1];
+console.log(bubblesort1(array1));
 
+
+/* let word1 = "Ivaan";
+let word2 = "ivaan";
+
+console.log(word1.localeCompare(word2, undefined, {numeric: true})); */
 
 
 
