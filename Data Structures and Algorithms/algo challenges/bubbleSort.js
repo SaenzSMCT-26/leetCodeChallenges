@@ -107,3 +107,40 @@ let array4 = [
 ]
 
 console.log(bubblesort4(array4, "name"));
+
+
+
+function bubbleSort5(a, comFn){
+      let n = a.length;
+      let counter = 0;
+      // let conclude = 2;
+
+/* outerLoop: */for(let i = 0; i < n; i++){
+            for(let j = 0; j < n - i -1; j++){
+                  if(!comFn(a[j], a[j+1])){
+                        [a[j], a[j+1]] = [a[j+1], a[j]];
+                        counter++;
+                        // if(counter === conclude) break outerLoop;
+                  }
+            }
+      }
+      if(counter){console.log(`Swapped ${counter} times.`); return a;};
+}
+
+let array = [2,5,1,4,6,3];
+console.log(bubbleSort5(array, (a, b) => a > b));
+
+//=======================================================================================
+// First ever function on my own using a for loop to convert an array into a hashMap
+//=======================================================================================
+function convertToObj(arr){
+      let map = {};
+      let n = arr.length;
+      for(let i = 0; i < n; i++){
+            map[arr[i]] = i + 1;
+      }
+      return map;
+}
+
+let arr = ['a','b','c','d'];
+console.log(convertToObj(arr));
