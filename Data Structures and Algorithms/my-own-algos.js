@@ -56,3 +56,20 @@ const findTheNumberInLetters = function(a1, a2){
 findTheNumberInLetters(arr1, arr2); */
 
 
+/* let word1 = "Ivaan";
+let word2 = "ivaan";
+
+console.log(word1.localeCompare(word2, undefined, {numeric: true})); */
+
+
+
+/* let scammer = true;
+let notScammer = true;
+let george = scammer;
+function person(name){
+      let isGoodPerson = true;
+      if(name === scammer) isGoodPerson = false;
+      return isGoodPerson;
+}
+
+console.log(`George is a good person?: ${person(george)}`); */ 

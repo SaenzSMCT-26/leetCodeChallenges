@@ -11,17 +11,36 @@
             margin: 0;
         }
         body{
-
             height: 100vh;
             text-align: center;
             align-content: center;
             color: white;
             background-color: black;
         }
+        .screen{
+            color: black;
+            background-color: white;
+            width: 100px;
+            height: 50px;
+        }
+        .addNumber{
+            width: 40px;
+            height: 20px;
+        }
     </style>
 </head>
 <body>
+
+    <h1 class="screen" style="align-items: center; text-align: center"></h1>
+    <button class="addNumber"></button>
+
     <div class="cont">AlgosPractice</div>
-    <script src="my-own-algos.js"></script>
+    <script>
+        let addNumber = document.querySelector(".addNumber");
+
+        addNumber.addEventListener('click', function(a){
+            document.querySelector(".screen").a = 1++;
+        });
+    </script>
 </body>
 </html>
