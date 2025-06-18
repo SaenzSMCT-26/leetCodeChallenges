@@ -2,25 +2,20 @@ const bubblesort1 = function(arr){
 
       let sorted = false; 
       let counter = 0;
-      let k = 2;
+      let conclude = 2;
 
-      outerLoop : for(let i = 0; i < arr.length; i++){
+      outerLoop: for(let i = 0; i < arr.length; i++){
             for(let j = 0; j < arr.length - i - 1; j++){
                   if(arr[j] > arr[j+1]){
                         [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
                         sorted = true;
                         counter++;
-                        if(counter === k) break outerLoop;
+                        if(counter === conclude) break outerLoop;
                   }
             }
       }
       if(!sorted) return 'Already Sorted';
-      if(counter === k){
-            console.log(`After ${counter} swaps.`);
-            return arr;
-      }
-            
-      // if (sorted) {console.log(`the array is sorted in ${counter} swaps.`); return arr;}
+      if(counter === conclude){console.log(`After ${counter} swaps.`); return arr;}
 } 
 
 let array1 = [9, 7, 5, 3, 1];
@@ -46,3 +41,12 @@ function person(name){
 }
 
 console.log(`George is a good person?: ${person(george)}`); */ 
+
+
+const bubbleSort2 = function(a) {
+      for(let i = 0; i<a.length; i++){
+            for(let j = 0; j<a.length - i - 1; j++){
+                  
+            }
+      }
+}
