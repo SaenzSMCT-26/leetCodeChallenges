@@ -82,14 +82,14 @@ let array3 = [3,2,1,6,4,5];
 console.log(bubblesort3(array3)); */
 
 
-const bubblesort4 = function(arr, compareFunction, k){
+const bubblesort4 = function(arr, k){
       let hasBeenSorted = false; 
       let counter = 0;
       let n = arr.length
 
       outerLoop : for(let i = 0; i < n; i++){
             for(let j = 0; j < n - i - 1; j++){
-                  if(arr[j][k].localeCompare(arr[j+1][k], "en", {sensitive: true})){
+                  if(arr[j][k].localeCompare(arr[j+1][k]) > 0){
                         [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
                         hasBeenSorted = true;
                         counter++;
@@ -103,7 +103,7 @@ const bubblesort4 = function(arr, compareFunction, k){
 let array4 = [
       {name: "Bob", grade: 90},
       {name: "Alice", grade: 95},
-      {name: "Claude", grade: 80}
+      {name: "Claude", grade: 99}
 ]
 
-console.log(bubblesort4(array4));
+console.log(bubblesort4(array4, "name"));
