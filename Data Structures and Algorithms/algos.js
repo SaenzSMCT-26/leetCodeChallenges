@@ -350,3 +350,57 @@ function bubbleSort(arr){
 
 let arrayTwo = [1,2,6,4,5,10];
 bubbleSort(arrayTwo);
+
+
+
+function findNemo(a){
+    let count = 0;
+    let n = a.length;
+    for(let i=0; i<n; i++){
+        if(arr[i] === 'nemo'){
+            count++;
+            console.log(`found ${arr[i]} at index ${count}.`);
+            break;
+        }
+    }
+}
+
+let arr = ['nemo', 'name', 'hello', 'bob', 'billy'];
+findNemo(arr);
+
+
+
+
+
+function printFirstItemFirstHalfThenSayHi100Times(items) {
+    console.log(items[0]);
+
+    let middleIndex = Math.floor(items.length / 2);
+    let index = 0;
+
+    while(index < middleIndex){
+        console.log(items[index]);
+        index++;
+    }
+    for(let i = 0; i<100; i++){
+        console.log('hi');
+    }
+}
+
+//O(n)
+
+function twoSum(arr, target){
+    let map = {};
+    let n = arr.length;
+    for(let i = 0; i<n; i++){
+        let comp = target - arr[i];
+        if(map[comp] !== undefined) return [map[comp], i];
+        map[arr[i]] = i;
+    }
+    return 'nothing here';
+}
+
+let a = [3,4,6,2,7];
+let b = 13;
+
+console.log(twoSum(a, b));
