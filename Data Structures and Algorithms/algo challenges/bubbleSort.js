@@ -62,15 +62,15 @@
 /* const bubblesort3 = function(arr, compareFunction){
       let hasBeenSorted = false; 
       let counter = 0;
+      let k = 2;
 
-      compareFunction = (a, b) => a > b;
-
-      outerLoop: for(let i = 0; i < arr.length; i++){
+      outerLoop : for(let i = 0; i < arr.length; i++){
             for(let j = 0; j < arr.length - i - 1; j++){
-                  if(!compareFunction(arr[j], arr[j+1])){
+                  if(arr[j] > arr[j+1]){
                         [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
-                        hasBeenSorted = true;
+                        sorted = true;
                         counter++;
+                        if(counter === k) break outerLoop;
                   }
             }
       }
