@@ -300,7 +300,7 @@ function twoSum(n, t){
 }
 
 // this will call the function and log the result([0, 1]) to the output terminal
-console.log(twoSum(nums, target)); 
+/* console.log(twoSum(nums, target)); 
 
 
 let letters = ['a','b','c',2,'d','e'];
@@ -404,3 +404,26 @@ let a = [3,4,6,2,7];
 let b = 13;
 
 console.log(twoSum(a, b));
+
+
+function fizzbuzz(n){
+    for(let i = 1; i <= n; i++){
+        if(i % 3 === 0 && i % 5 === 0) console.log('FizzBuzz');
+        else if(i % 3 === 0) console.log('Fizz');
+        else if(i % 5 === 0) console.log('Buzz');
+        else console.log(i);
+    }
+}
+
+fizzbuzz(100); */
+
+
+//O(n^2)
+
+function mapArray(a){
+    let n = a.length;
+    let map = {};
+    for(let i = 0; i < n; i++){
+        if(a !== undefined){return map[i]}
+    }
+}

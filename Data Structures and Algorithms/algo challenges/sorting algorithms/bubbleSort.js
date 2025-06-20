@@ -124,23 +124,10 @@ function bubbleSort5(a, comFn){
                   }
             }
       }
-      if(counter){console.log(`Swapped ${counter} times.`); return a;};
+      console.log(`Swapped ${counter} times.`);
+      return a;
 }
 
 let array = [2,5,1,4,6,3];
 console.log(bubbleSort5(array, (a, b) => a > b));
 
-//=======================================================================================
-// First ever function on my own using a for loop to convert an array into a hashMap
-//=======================================================================================
-function convertToObj(arr){
-      let map = {};
-      let n = arr.length;
-      for(let i = 0; i < n; i++){
-            map[arr[i]] = i + 1;
-      }
-      return map;
-}
-
-let arr = ['a','b','c','d'];
-console.log(convertToObj(arr));
