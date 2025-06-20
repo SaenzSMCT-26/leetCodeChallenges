@@ -279,3 +279,21 @@ calcAge(2000); */
 /* Hoisting: Makes some types of variables accessible/
 usable in the code before they are actually declared. 
 "variables lifted to the top of their scope"*/
+
+for(let rep = 1; rep <= 10; rep++){
+    console.log('hello for');
+}
+
+let rep = 1;
+while(rep <= 10){
+    // console.log(console.log('hello while'));
+    rep++
+}
+
+let dice = Math.random(Math.random() * 6) + 1;
+
+while(dice !== 6){
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if(dice === 6) console.log('Loop is about to end...');
+}
