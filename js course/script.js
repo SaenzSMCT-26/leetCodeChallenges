@@ -280,20 +280,52 @@ calcAge(2000); */
 usable in the code before they are actually declared. 
 "variables lifted to the top of their scope"*/
 
-for(let rep = 1; rep <= 10; rep++){
-    console.log('hello for');
+// for(let rep = 1; rep <= 10; rep++){
+//     console.log('hello for');
+// }
+
+// let rep = 1;
+// while(rep <= 10){
+//     // console.log(console.log('hello while'));
+//     rep++
+// }
+
+// let dice = Math.random(Math.random() * 6) + 1;
+
+// while(dice !== 6){
+//     console.log(`You rolled a ${dice}`);
+//     dice = Math.trunc(Math.random() * 6) + 1;
+//     if(dice === 6) console.log('Loop is about to end...');
+// }
+
+const calcTip = function(bill){
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
 
-let rep = 1;
-while(rep <= 10){
-    // console.log(console.log('hello while'));
-    rep++
+function calcTotalAndTips(a){
+    let n = a.length;
+    for(let i = 0; i < n; i++){
+        let tip = calcTip(a[i]);
+        tips.push(tip);
+        totals.push(tip + bills[i]);
+    }
+    return `Bills: ${bills}
+Tips: ${totals}
+Totals: ${tips}`;
+}
+const bills = [22,295,176,440,37,105,10,1100,86,52];
+const tips = [];
+const totals = [];
+console.log(calcTotalAndTips(bills));
+
+
+function calcAverage(arr){
+    let n = arr.length;
+    let sum = 0;
+    for(let i = 0; i < n; i++){
+        sum += arr[i];
+    }
+    return sum / n;
 }
 
-let dice = Math.random(Math.random() * 6) + 1;
-
-while(dice !== 6){
-    console.log(`You rolled a ${dice}`);
-    dice = Math.trunc(Math.random() * 6) + 1;
-    if(dice === 6) console.log('Loop is about to end...');
-}
+console.log(calcAverage(tips));
