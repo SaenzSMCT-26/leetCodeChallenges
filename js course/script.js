@@ -16,9 +16,6 @@
 // console.log(flight);
 // console.log(isaac);
 
-
-
-
 // const transaction = {
 //     id: 104,
 //     amount: 500,
@@ -35,7 +32,6 @@
 // }
 
 // logTransaction(details);
-
 
 /*first class vs higher-order- functions*/
 
@@ -65,8 +61,6 @@
 
 // greet('Hi')('Isaac');
 
-
-
 //---------------------
 //operator precedennce
 //---------------------
@@ -82,9 +76,6 @@ console.log(x, y);
 
 const  averageAge = (ageIsaac + ageKels) / 2;
 console.log(ageIsaac, ageKels, averageAge); */
-
-
-
 
 //------------------------------------------------------
 // taking decisions: if / else statements
@@ -110,9 +101,6 @@ if(birthYear <= 2000){
 
 console.log(century); */
 
-
-
-
 //------------------------------------------------------
 // type conversion and coercion
 //------------------------------------------------------
@@ -133,8 +121,6 @@ console.log(String(23), 23);
 //type coercion
 console.log('I am ' + 23 + ' years old.');
 console.log('I am ' + '23' + ' years old'); */
-
-
 
 //------------------------------------------------------
 // truthy and falsy
@@ -159,7 +145,6 @@ if(height){
     console.log('Height is UNDEFINED');
 } */
 
-
 //========================================================================================================================
 //                                                  (JS Fundamentals)
 //========================================================================================================================
@@ -181,8 +166,6 @@ if(height){
 //|  FALSE  |   FALSE   |   FALSE   |
 //|         |           |           |
 //|_________|___________|___________|
-
-
 
 /* console.log(Boolean(0));
 console.log(Boolean(undefined));
@@ -221,7 +204,6 @@ else{
 
 if(fav !== 23) console.log('Why not 23?'); */
 
-
 /* Challenge 3 video solution */
 // function avScores(a, b){
 //     if(a > b) console.log()
@@ -253,7 +235,6 @@ switch(day){
     default:
         console.log('Not a valid day!');
 } */
-
 
 /* function calcAge(birthYear) {
     const age = 2025 - birthYear;
@@ -298,34 +279,52 @@ usable in the code before they are actually declared.
 //     if(dice === 6) console.log('Loop is about to end...');
 // }
 
-const calcTip = function(bill){
-    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const calcTip = function(bill){
+//     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
+
+// function calcTotalAndTips(a){
+//     let n = a.length;
+//     for(let i = 0; i < n; i++){
+//         let tip = calcTip(a[i]);
+//         tips.push(tip);
+//         totals.push(tip + bills[i]);
+//     }
+//     return `Bills: ${bills}
+// Tips: ${totals}
+// Totals: ${tips}`;
+// }
+// const bills = [22,295,176,440,37,105,10,1100,86,52];
+// const tips = [];
+// const totals = [];
+// console.log(calcTotalAndTips(bills));
+
+// function calcAverage(arr){
+//     let n = arr.length;
+//     let sum = 0;
+//     for(let i = 0; i < n; i++){
+//         sum += arr[i];
+//     }
+//     return sum / n;
+// }
+
+// console.log(calcAverage(tips));
+
+function sumNumbers(arr) {
+        let total = 0;
+        for (const item of arr) {
+                if (Array.isArray(item)) total += sumNumbers(item);
+                total += item;
+        }
+        return total;
 }
 
-function calcTotalAndTips(a){
-    let n = a.length;
-    for(let i = 0; i < n; i++){
-        let tip = calcTip(a[i]);
-        tips.push(tip);
-        totals.push(tip + bills[i]);
-    }
-    return `Bills: ${bills}
-Tips: ${totals}
-Totals: ${tips}`;
-}
-const bills = [22,295,176,440,37,105,10,1100,86,52];
-const tips = [];
-const totals = [];
-console.log(calcTotalAndTips(bills));
+console.log(sumNumbers([1, 2, [3, 4, [5]]]));
 
-
-function calcAverage(arr){
-    let n = arr.length;
-    let sum = 0;
-    for(let i = 0; i < n; i++){
-        sum += arr[i];
-    }
-    return sum / n;
-}
-
-console.log(calcAverage(tips));
+// function logNumb(num){
+//     if(i <= num){
+//         console.log(i);
+//         logNumb(num, i+1);
+//     }
+// }
+// logNumb(10);
