@@ -131,7 +131,7 @@ let array = [2,5,1,4,6,3];
 console.log(bubbleSort5(array, (a, b) => a > b));
 
 //=======================================================================================
-// First ever function on my own using a for loop to convert an array into a hashMap
+//    First ever function on my own using a for loop to convert an array into a hashMap
 //=======================================================================================
 function convertToObj(arr){
       let map = {};
@@ -144,3 +144,11 @@ function convertToObj(arr){
 
 let arr = ['a','b','c','d'];
 console.log(convertToObj(arr));
+
+
+function fizzBuzz(n) {
+    while(n === 1 && n <= 100){
+      n**3 && n**5 ? console.log('FizzBuzz') : null;
+    }
+}
+fizzBuzz();
