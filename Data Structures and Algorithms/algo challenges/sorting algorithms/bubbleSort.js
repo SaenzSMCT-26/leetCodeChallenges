@@ -124,7 +124,8 @@ function bubbleSort5(a, comFn){
                   }
             }
       }
-      if(counter){console.log(`Swapped ${counter} times.`); return a;};
+      console.log(`Swapped ${counter} times.`);
+      return a;
 }
 
 let array = [2,5,1,4,6,3];

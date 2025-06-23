@@ -300,7 +300,7 @@ function twoSum(n, t){
 }
 
 // this will call the function and log the result([0, 1]) to the output terminal
-console.log(twoSum(nums, target)); 
+/* console.log(twoSum(nums, target)); 
 
 
 let letters = ['a','b','c',2,'d','e'];
@@ -350,3 +350,80 @@ function bubbleSort(arr){
 
 let arrayTwo = [1,2,6,4,5,10];
 bubbleSort(arrayTwo);
+
+
+
+function findNemo(a){
+    let count = 0;
+    let n = a.length;
+    for(let i=0; i<n; i++){
+        if(arr[i] === 'nemo'){
+            count++;
+            console.log(`found ${arr[i]} at index ${count}.`);
+            break;
+        }
+    }
+}
+
+let arr = ['nemo', 'name', 'hello', 'bob', 'billy'];
+findNemo(arr);
+
+
+
+
+
+function printFirstItemFirstHalfThenSayHi100Times(items) {
+    console.log(items[0]);
+
+    let middleIndex = Math.floor(items.length / 2);
+    let index = 0;
+
+    while(index < middleIndex){
+        console.log(items[index]);
+        index++;
+    }
+    for(let i = 0; i<100; i++){
+        console.log('hi');
+    }
+}
+
+//O(n)
+
+function twoSum(arr, target){
+    let map = {};
+    let n = arr.length;
+    for(let i = 0; i<n; i++){
+        let comp = target - arr[i];
+        if(map[comp] !== undefined) return [map[comp], i];
+        map[arr[i]] = i;
+    }
+    return 'nothing here';
+}
+
+let a = [3,4,6,2,7];
+let b = 13;
+
+console.log(twoSum(a, b));
+
+
+function fizzbuzz(n){
+    for(let i = 1; i <= n; i++){
+        if(i % 3 === 0 && i % 5 === 0) console.log('FizzBuzz');
+        else if(i % 3 === 0) console.log('Fizz');
+        else if(i % 5 === 0) console.log('Buzz');
+        else console.log(i);
+    }
+}
+
+fizzbuzz(100); */
+
+
+//O(n^2)
+
+function mapArray(a){
+    let n = a.length;
+    let map = {};
+    for(let i = 0; i < n; i++){
+        if(a !== undefined){return map[i]}
+    }
+}
