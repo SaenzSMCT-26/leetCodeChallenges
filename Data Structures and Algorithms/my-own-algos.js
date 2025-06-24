@@ -1,9 +1,7 @@
-"use strict";
-
+'use strict';
 
 //generates random number in a range of min and max number inputs
 //
-
 
 /* const generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -55,13 +53,10 @@ const findTheNumberInLetters = function(a1, a2){
 
 findTheNumberInLetters(arr1, arr2); */
 
-
 /* let word1 = "Ivaan";
 let word2 = "ivaan";
 
 console.log(word1.localeCompare(word2, undefined, {numeric: true})); */
-
-
 
 /* let scammer = true;
 let notScammer = true;
@@ -72,20 +67,19 @@ function person(name){
       return isGoodPerson;
 }
 
-console.log(`George is a good person?: ${person(george)}`); */ 
-
+console.log(`George is a good person?: ${person(george)}`); */
 
 //=======================================================================================
 // First ever function on my own using a for loop to convert an array into a hashMap
 //=======================================================================================
-function convertToObj(arr){
-      let map = {};
-      let n = arr.length;
-      for(let i = 0; i < n; i++){
-            map[arr[i]] = i + 1;
-      }
-      return map;
+function convertToObj(arr) {
+	let map = {};
+	let n = arr.length;
+	for (let i = 0; i < n; i++) {
+		map[arr[i]] = i + 1;
+	}
+	return map;
 }
 
-let arr = ['a','b','c','d'];
+let arr = ['a', 'b', 'c', 'd'];
 console.log(convertToObj(arr));

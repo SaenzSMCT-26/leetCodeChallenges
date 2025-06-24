@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // const flight = 'LH234';
 // const isaac = {
@@ -311,12 +311,12 @@ usable in the code before they are actually declared.
 // console.log(calcAverage(tips));
 
 function sumNumbers(arr) {
-        let total = 0;
-        for (const item of arr) {
-                if (Array.isArray(item)) total += sumNumbers(item);
-                total += item;
-        }
-        return total;
+	let total = 0;
+	for (const item of arr) {
+		if (Array.isArray(item)) total += sumNumbers(item);
+		total += item;
+	}
+	return total;
 }
 
 console.log(sumNumbers([1, 2, [3, 4, [5]]]));
