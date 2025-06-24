@@ -1,9 +1,19 @@
 {
-    "liveServer.settings.fullReload": true,
-    "liveServer.settings.ChromeDebuggingAttachment": true,
-    "fiveServer.injectBody": true,
-    "fiveServer.openTerminal": false,
-    "prettier.tabWidth": 8,
-    "prettier.useTabs": true,
-    "editor.tabSize": 8
+	"liveServer.settings.fullReload": true,
+	"liveServer.settings.ChromeDebuggingAttachment": true,
+	"fiveServer.injectBody": true,
+	"fiveServer.openTerminal": false,
+	"prettier.tabWidth": 8,
+	"prettier.useTabs": true,
+	"editor.tabSize": 8,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true
 }
