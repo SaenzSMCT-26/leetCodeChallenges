@@ -4,5 +4,6 @@
     "fiveServer.injectBody": true,
     "fiveServer.openTerminal": false,
     "prettier.tabWidth": 8,
-    "prettier.useTabs": true
+    "prettier.useTabs": true,
+    "editor.tabSize": 8
 }
