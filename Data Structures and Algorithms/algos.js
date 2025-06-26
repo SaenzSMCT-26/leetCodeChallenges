@@ -2,22 +2,19 @@
 
 // 1.Can I restate the problem in my own words?
 // 2.What are the inputs that go into the problem?
-    // - ints?
-    // - floats?
-    // - what about string for large numbers?
+// - ints?
+// - floats?
+// - what about string for large numbers?
 // 3.What are theouptuts that should come from the solution to the problem?
-    // - int? float? string?
+// - int? float? string?
 // 4.Can the outputs be determined from the inputs? In other words, do I have enough information to solve the problem?
 // 5.How should I lavel the important peices of data that are a part of the problem?
-
 
 // function charCount(str){
 //     // do something
 //     // return an object with keys that are lowercase alphanumeric characters in the string; values should be the counts for those characters
 
 // }
-
-
 
 // charCount('Your PIN number is 1234');
 
@@ -40,8 +37,6 @@
 // // return object at end
 // }
 
-
-
 //===================================================================================================================================
 //                                                      BUBBLE SORT ALGORITHM
 //===================================================================================================================================
@@ -61,7 +56,6 @@
 //     return 'Nothing Here';
 // }
 
-
 // function sortArrays2(ar1, arr2){
 //     let noteBook = {};
 //     for(let i = 0; i < array1.length; i++){
@@ -71,7 +65,6 @@
 // }
 // console.log(sortArrays(array1, array2));
 // console.log(sortArrays2(array1, array2));
-
 
 // let nums = [1,2,3,4,5];
 //         // [0,1,2,3,4] <---- this represents the index number in the array "nums" for the each of the items;
@@ -89,7 +82,6 @@
 //     return 'Nothing Found';
 // }
 
-
 // //---------------
 // //      O(n)
 // //---------------
@@ -105,15 +97,8 @@
 // console.log(`[${twoSum1(nums, target)}] <-- O(n^2)`);
 // console.log(`[${twoSum2(nums, target)}] <-- O(n)`);
 
-
-
-
-
-
-
 // let array1 = [1,2,3,4,5];
 // let array2 = [3,5,2,1,9];
-
 
 // //---------------
 // //   Hash Map Lookup -- O(n)
@@ -132,7 +117,7 @@
 //         if(map[array2[j]]){
 //             return true;
 //         }
-//     } 
+//     }
 //     return false;
 // }
 
@@ -155,7 +140,6 @@
 
 // console.log(isDivisibleBy3(numbers));
 
-
 // let list = [3,6,8,10,43,25,16];
 
 // const findDivisible = function(a){
@@ -175,128 +159,73 @@
 
 // console.log(findDivisible(list));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let nums = [2,7,11,15];
+let nums = [2, 7, 11, 15];
 /* this is your data you will be sorting through
    to find the 2 #s that add up to the target # */
 let target = 9; // this is the target #
 
-
 // this is your function
-function twoSum(n, t){
-
-
-
-    //____________________________________________________________________________________________________    
-    //-------------------------------                   
-    //hM - (hash map/ storage)
-    //-------------------------------                   
-    let hM = {};
-    /* this will be the storage for the numbers that
+function twoSum(n, t) {
+	//____________________________________________________________________________________________________
+	//-------------------------------
+	//hM - (hash map/ storage)
+	//-------------------------------
+	let hM = {};
+	/* this will be the storage for the numbers that
     don't meet the if statements conditions. it is currently empty*/
-    //___________________________________________________________________________________________________
+	//___________________________________________________________________________________________________
 
+	for (let i = 0; i < n.length; i++) {
+		// using a for loop to loop through the nums list
 
+		//========================================================================================================================================================================
 
-    for(let i = 0; i < n.length; i++){ // using a for loop to loop through the nums list
-
-
-
-        //========================================================================================================================================================================
-
-        // first iteration: let c = 9 - 2 = 7
-        let c = t - n[i];
-        /* c(complement) is a going to = the target minus 
+		// first iteration: let c = 9 - 2 = 7
+		let c = t - n[i];
+		/* c(complement) is a going to = the target minus 
            the nums list current iteration */
-        //========================================================================================================================================================================
+		//========================================================================================================================================================================
 
-
-
-
-
-
-
-
-
-        
-
-        
-        //========================================================================================================================================================================
-        //-----------------------------                   
-        //first iteration: 
-        //-----------------------------                   
-        /* does the hash  of 7 exist in hM ? if not, ignore return statement and move to the next 
+		//========================================================================================================================================================================
+		//-----------------------------
+		//first iteration:
+		//-----------------------------
+		/* does the hash  of 7 exist in hM ? if not, ignore return statement and move to the next 
            if  exists  */
 
-        if(hM[c] !== undefined) return [hM[c], i];
-        /* this is the conditional statement that 
+		if (hM[c] !== undefined) return [hM[c], i];
+		/* this is the conditional statement that 
         essentially says if a complementary # is 
         found in the storage that can be added to 
         the current # that the for loop is iterating 
         through - and is NOT an undefined # in the 
         storage anymore - then return [hM[c], i]([0, 1]) */
-        //========================================================================================================================================================================
-        
-        
+		//========================================================================================================================================================================
 
+		//========================================================================================================================================================================
+		//i = the current index iteration of the for loop
+		//n = the current iterated number in our array "nums".
+		//hM = the hashMap(storage) or object has the stored #s that are inadiquate to the conditional statement
 
-
-
-
-
-
-
-
-        //========================================================================================================================================================================
-        //i = the current index iteration of the for loop
-        //n = the current iterated number in our array "nums".
-        //hM = the hashMap(storage) or object has the stored #s that are inadiquate to the conditional statement
-        
-        /* so hM[n[i]] is like saying "store the current index(i) of the array 'nums' value(2) in object(hM) andj assign it the value of the current index(i = 0)" */ 
-        /*    ^  ^ ^___________________________________________^                            ^            ^    
+		/* so hM[n[i]] is like saying "store the current index(i) of the array 'nums' value(2) in object(hM) andj assign it the value of the current index(i = 0)" */
+		/*    ^  ^ ^___________________________________________^                            ^            ^    
               |  |__________________________________________________________________________|            |
               |__________________________________________________________________________________________|   */
 
+		//--------------------------------------
+		// can be described as:
+		//--------------------------------------
+		// loop iteration code,
+		// hash map assignment,
+		// mutation step inside loop,
+		// or side-effect-producing statement during
 
-        //--------------------------------------
-        // can be described as: 
-        //--------------------------------------
-        // loop iteration code, 
-        // hash map assignment, 
-        // mutation step inside loop, 
-        // or side-effect-producing statement during
-
-        hM[n[i]] = i;
-        /* This represents a value that is going 
+		hM[n[i]] = i;
+		/* This represents a value that is going 
         to get stored in our hashMap(the "storage") 
         if our conditional statement isn't met*/
-        //========================================================================================================================================================================
-    }
+		//========================================================================================================================================================================
+	}
 }
 
 // this will call the function and log the result([0, 1]) to the output terminal
@@ -417,13 +346,14 @@ function fizzbuzz(n){
 
 fizzbuzz(100); */
 
-
 //O(n^2)
 
-function mapArray(a){
-    let n = a.length;
-    let map = {};
-    for(let i = 0; i < n; i++){
-        if(a !== undefined){return map[i]}
-    }
+function mapArray(a) {
+	let n = a.length;
+	let map = {};
+	for (let i = 0; i < n; i++) {
+		if (a !== undefined) {
+			return map[i];
+		}
+	}
 }
