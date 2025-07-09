@@ -83,3 +83,14 @@ function convertToObj(arr) {
 
 let arr = ['a', 'b', 'c', 'd'];
 console.log(convertToObj(arr));
+
+const user1Data = {
+	userName: 'SaenzSMCT26',
+	email: 'saenz.smct.26@gmail.com',
+	id: 38202589113115,
+	firstName: 'Isaac',
+	lastName: 'Saenz',
+	fullNameFn: function () {
+		return `${this.firstName} ${this.lastName}`;
+	},
+};
