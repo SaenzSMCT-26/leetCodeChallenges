@@ -142,9 +142,36 @@ function convertToObj(arr) {
 let arr = ['a', 'b', 'c', 'd'];
 console.log(convertToObj(arr));
 
-function fizzBuzz(n) {
-	while (n === 1 && n <= 100) {
-		n ** 3 && n ** 5 ? console.log('FizzBuzz') : null;
+/* const obJ = {
+	fizzBuzz() {
+		let value;
+		let size = 20;
+		for (let i = 1; i <= size; i++) {
+			if (i % 3 === 0 && i % 5 === 0) value = 'FizzBuzz';
+			else if (i % 3 === 0) value = 'Fizz';
+			else if (i % 5 === 0) value = 'Buzz';
+			else value = i;
+			console.log(value);
+		}
+	},
+};
+
+obJ.fizzBuzz(); */
+
+function bubbleSort6(a) {
+	const len = a.length;
+	let hasBeenSorted = false;
+	let result;
+	for (let i = 0; i < len; i++) {
+		for (let j = 0; j < len - i - 1; j++) {
+			if (a[j] > a[j + 1]) {
+				[a[j], a[j + 1]] = [a[j + 1], a[j]];
+				hasBeenSorted = true;
+			}
+		}
 	}
+	!hasBeenSorted ? console.log('ARRAY IS ALREADY SORTED') : console.log(a);
 }
-fizzBuzz();
+
+let arrrrrrrr = [1, 2, 3, 5, 4];
+bubbleSort6(arrrrrrrr);

@@ -1,4 +1,18 @@
 'use strict';
+//===============================================================================
+//						Challenges
+//===============================================================================
+
+/* unction sumNumbers(arr) {
+	let total = 0;
+	for (const item of arr) {
+		if (Array.isArray(item)) total += sumNumbers(item);
+		total += item;
+	}
+	return total;
+}
+
+console.log(sumNumbers([1, 2, [3, 4, [5]]])); */
 
 // const flight = 'LH234';
 // const isaac = {
@@ -310,17 +324,6 @@ usable in the code before they are actually declared.
 
 // console.log(calcAverage(tips));
 
-function sumNumbers(arr) {
-	let total = 0;
-	for (const item of arr) {
-		if (Array.isArray(item)) total += sumNumbers(item);
-		total += item;
-	}
-	return total;
-}
-
-console.log(sumNumbers([1, 2, [3, 4, [5]]]));
-
 // function logNumb(num){
 //     if(i <= num){
 //         console.log(i);
@@ -328,3 +331,214 @@ console.log(sumNumbers([1, 2, [3, 4, [5]]]));
 //     }
 // }
 // logNumb(10);
+
+// call and apply methods
+const lufthansa = {
+	ariline: 'Lufthansa',
+	iataCode: 'LH',
+	bookings: [],
+	// book: function() {}
+	book(flightNum, name) {
+		return `${name} booked a seat on ${this.ariline} flight ${this.iataCode}${flightNum}`;
+	},
+};
+
+console.log(lufthansa.book(239, 'Isaac Saenz'));
+console.log(lufthansa.book(635, 'Kelsey Saenz'));
+
+// Destructuring Objects
+
+const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+
+const hours = {
+	[days[2]]: {
+		open: 12,
+		close: 22,
+	},
+	[days[3]]: {
+		open: 11,
+		close: 23,
+	},
+	[days[4]]: {
+		open: 0,
+		close: 24,
+	},
+};
+
+hours;
+
+const restaurant = {
+	name: 'Classico Italiano',
+	location: 'Via Angelo Tavanti 23, Firenze, Italy',
+	categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+	starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+	mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+	order: function (starterIndex, mainIndex) {
+		return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+	},
+
+	hours,
+
+	orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
+		console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+	},
+
+	orderPasta(ing1, ing2, ing3) {
+		return `Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}.`;
+	},
+};
+
+const properties = Object.keys(hours);
+properties;
+
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+	openStr += `${day}, `;
+}
+openStr;
+
+// property VALUES
+const values = Object.values(hours);
+values;
+
+// Entire Object
+const entries = Object.entries(hours);
+entries;
+
+for (const [key, { open, close }] of entries) {
+	const sent = `On ${key} we open at ${open} and close at ${close}`;
+	sent;
+}
+
+/* for (const day of days) {
+	const open = restaurant.hours[day]?.open || 'closed';
+	console.log(`On ${day}, we open at ${open}`);
+} */
+
+// if (restaurant.hours.fri) console.log(restaurant.hours.fri.open);
+
+/* console.log(restaurant.hours.fri?.open);
+console.log(restaurant.hours.thu?.open);
+console.log(restaurant.hours.wed?.open); */
+
+/* const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) console.log(item);
+
+for (const item of menu.entries()) console.log(item);
+
+for (const [i, el] of menu.entries()) {
+	console.log(`${i + 1}: ${el}`);
+} */
+
+/* restaurant.numGuests = 0;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+const guestCorrect = 0;
+restaurant.numGuests ?? 10;
+console.log(guestCorrect); */
+
+// const arr = [1, 2, ...[3, 4]];
+
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+
+// console.log(a, b, others);
+
+// const [pizza, , risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(pizza, risotto, otherFood);
+
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(weekdays);
+
+// // 2) Functions
+// const add = function (...numbers) {
+// 	let sum = 0;
+// 	for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+// 	console.log(sum);
+// };
+
+// add(2, 3);
+// add(5, 3, 7, 2);
+// add(8, 2, 5, 3, 2, 1, 4);
+
+// const x = [23, 5, 7];
+// add(...x);
+// console.log();
+
+/* const order1 = restaurant.orderDelivery({
+	time: '22:30',
+	address: 'Via del sole, 21',
+	mainIndex: 2,
+	srtarterIndex: 2,
+});
+order1;
+
+const order2 = restaurant.orderDelivery({
+	address: 'Via del sole, 21',
+	starterIndex: 1,
+});
+order2;
+
+const { name, openingHours, categories } = restaurant;
+name;
+openingHours;
+categories;
+
+const { name: restaurantName, openingHours: hours, catergories: tags } = restaurant;
+restaurantName;
+hours;
+tags;
+
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
+// Mutating variables
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+({ a, b } = obj);
+a; //----->
+b; //----->
+
+const {
+	fri: { open, close },
+} = openingHours;
+open;
+close; */
+
+// using spread operator
+/* const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+badNewArr;
+
+const newGoodArr = [1, 2, ...arr];
+newGoodArr;
+
+console.log(...newGoodArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+newMenu;
+
+// copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// Join 2 arrays
+const fullMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+fullMenu;
+
+// Iterables: arrays, strings, maps, sets. Not objects
+const str = 'Isaac';
+const letters = [...str, ' ', 's.'];
+letters;
+console.log(...str);
+console.log(`${str} Isaac`);
+
+const ingredients = [prompt("Let's make pasta! Indgredient 1?"), prompt('Ingredient 2?'), prompt('Ingredient 3?')];
+
+ */
