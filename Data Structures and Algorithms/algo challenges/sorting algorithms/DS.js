@@ -62,7 +62,7 @@ console.log(result); */
 // const values = Object.entries(userData.user1.DOB.month)
 /* for(const [k, v] of values) {
 	if(i !== len - 1) { 
-		console.log(`${k}: ${v}`);
+		console.log(`iteration ${i} ${k}: ${v}`);
 		i++;
 	}
 } */
