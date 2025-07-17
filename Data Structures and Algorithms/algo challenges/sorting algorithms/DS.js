@@ -9,9 +9,11 @@ const userData = {
 		loginPassword: 'S.SMCT.26$$:);)',
 
 		DOB: {
-			month: {value1:'Isaac', value2:'Saenz'},
-			day: 12,
+			month: 7,
+			day: 26,
 			year: 2000,
+
+			
 			/* concatinates the month, day, and year for the 
 			users date of birth and also has conditions on 
 			size of the digits*/
@@ -41,10 +43,30 @@ const userData = {
 		ethnicity: 'Native American',
 		eyeColor: 'brown',
 		height: `5'10"`,
-		weight: undefined,
+		weight: '218lbs',
 		occupation: 'Software Engineer',
 	},
 };
+
+class Fruit {
+	constructor(apples, oranges) {
+		this.apples = apples;
+		this.oranges = oranges;
+	}
+
+	appleFn() {
+		return this.apples * 4;
+	}
+	orangeFn() {
+		return this.oranges * this.apples;
+	}
+}
+
+const fruit1 = new Fruit(4, 3);
+console.log(fruit1.orangeFn());
+
+/* const data = Object.entries(userData.user1.DOB);
+for(const [keys, values] of data) if(typeof values !== 'function') console.log(`${keys} - ${values}`); */
 
 /* let result = userData.user1.DOB.dobFn();
 console.log(result); */
@@ -68,15 +90,45 @@ console.log(result); */
 } */
 
 function arraySort(a) {
-	let counter = 0;
 	for(const numValues of a) {
 		if(numValues === 3) return console.log(numValues);
-		else if(numValues !== 3) return console.log('no matching number sorry');
-		counter++;
 	}
+	return console.log('no matching number sorry')
 }
 
-const arr = [1,2,3,4,5];
-arraySort(arr);
+function Apartment1(sqFeet = 1, bedrooms = 1) {
+	this.sqFeet = sqFeet;
+	this.bedrooms = bedrooms;
+}
 
-// this above is the sorting algorithm using the for of loop
+Apartment1.prototype.isBig = function() {
+	this.sqFeet > 100 ? true : false;
+	if(this.sqFeet === true) console.log('wow thats a lot of sqfeet');
+}
+
+const apart1 = new Apartment1(120, 1);
+console.log(apart1.isBig());
+console.log(apart1);
+
+function pullDOB() {
+	const dateOfBirth = Object.entries(userData.user1.DOB);
+	for(const [k, v] of dateOfBirth) if(typeof v !== 'function') {
+		console.log(k);
+	};
+}
+
+pullDOB();
+
+
+const obj = {
+	two: 2,
+	fN() {
+		const four = 4;
+		const addUp = () => {  this.two + four };
+		return addUp();
+	},
+}
+
+obj.fN();
+
+

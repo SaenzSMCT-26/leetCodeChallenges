@@ -78,7 +78,7 @@ let array3 = [3,2,1,6,4,5];
 console.log(bubblesort3(array3)); */
 
 const bubblesort4 = function (arr, k) {
-	let hasBeenSorted = false;
+	let  = false;
 	let counter = 0;
 	let n = arr.length;
 

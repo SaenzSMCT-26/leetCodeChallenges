@@ -333,7 +333,7 @@ usable in the code before they are actually declared.
 // logNumb(10);
 
 // call and apply methods
-const lufthansa = {
+/* const lufthansa = {
 	ariline: 'Lufthansa',
 	iataCode: 'LH',
 	bookings: [],
@@ -365,9 +365,9 @@ const hours = {
 	},
 };
 
-hours;
+hours; */
 
-const restaurant = {
+/* const restaurant = {
 	name: 'Classico Italiano',
 	location: 'Via Angelo Tavanti 23, Firenze, Italy',
 	categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
@@ -410,7 +410,7 @@ entries;
 for (const [key, { open, close }] of entries) {
 	const sent = `On ${key} we open at ${open} and close at ${close}`;
 	sent;
-}
+} */
 
 /* for (const day of days) {
 	const open = restaurant.hours[day]?.open || 'closed';
@@ -539,6 +539,35 @@ letters;
 console.log(...str);
 console.log(`${str} Isaac`);
 
-const ingredients = [prompt("Let's make pasta! Indgredient 1?"), prompt('Ingredient 2?'), prompt('Ingredient 3?')];
+const ingredients = [prompt("Let's make pasta! Indgredient 1?"), prompt('Ingredient 2?'), prompt('Ingredient 3?')];*/
 
- */
+// console.log(3 || 'Isaac');
+// console.log('' || 'Isaac');
+// console.log(true || 0);
+// console.log(undefined || null);
+
+// const name = 'Isaac';
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+const array = [1, 2, 3, 5, 2, 3, 1, 5, 3, 4];
+
+const newSet = new Set(array);
+
+function sort() {
+	let arr = [];
+	let getting_sorted_by_loops = false;
+	newSet.forEach((numbers) => arr.push(numbers));
+	let len = arr.length;
+	for (let i = 0; i < len; i++) {
+		for (let j = 0; j < len - i - 1; j++) {
+			if (arr[j] > arr[j + 1]) {
+				[arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+				getting_sorted_by_loops = true;
+			}
+		}
+	}
+	if (!getting_sorted_by_loops) console.log(`[${arr}]: Array was already sorted ;).`);
+	else if (getting_sorted_by_loops) console.log(arr);
+}
+
+sort();
