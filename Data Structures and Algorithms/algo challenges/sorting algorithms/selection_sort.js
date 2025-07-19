@@ -10,10 +10,10 @@ the iteration.
 		let min = i; // index# 0, 1, 2, 3, 4
 		for (let j = i + 1; j < arr.length; j++) {
 			/* 
-min is equal to i, and i counts the index value of the array.
+min is equal to i, and i represents the index values of the array to be iterated through.
 
-j also equals to i, but you then have + 1 which changes the 
-index value that j starts on.
+j is also equal to i, but you then have + 1 which changes the changes the index value to start
+one above the "min" value. Ex: if min is index 0, j is index 1(example array with indices [0,1,2,3,4])
 
 when the looping starts, based on the condition iside the 
 inner loop, j and min will update accordingly.
@@ -32,6 +32,20 @@ const array1 = [22, 11, 31, 54, 42];
 console.log(selectionSort(array1));
 
 /* 
+SUMMARY:
+[Selection Sort Algorithm]
+Selection sort repeatedly finds the minimum 
+element from the unsorted part of the array
+and moves it to the beginning, building a 
+sorted section from left to right.
+--------------------------------------------
+It works by maintaining two subarrays: the 
+sorted and unsorted portions.
+--------------------------------------------
+Time complexity: O(n²). Useful for small 
+arrays and educational purposes.
+
+
 our array called array_to_loop [2, 1, 3, 5, 4];
 
 arr is the parameter, which is representative of the input we 
@@ -132,3 +146,19 @@ arr[min]|54| > arr[j]|42|:
 arr[min]|54| is greater than arr[j]|42|, so arr[min] now equals 42. iteration
 of the inner loop stops and arr[min]|42|[index 4] swaps with arr[i]|54|[index 3]
 */
+
+/* Bhelow is the full algorithm */
+
+function selectionSort2(arr) {
+	const len = arr.length;
+	for (let i = 0; i < len; i++) {
+		let min = i;
+		for (let j = i + 1; j < len; j++) {
+			if (arr[min] > arr[j]) min = j;
+		}
+		[arr[i], arr[min]] = [arr[min], arr[i]];
+	}
+	return arr;
+}
+
+console.log(selectionSort2(array1));
